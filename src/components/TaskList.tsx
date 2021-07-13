@@ -23,7 +23,8 @@ export function TaskList() {
     const randomId: number = Number(Math.random().toFixed(4));
 
     setTasks([
-      { ...tasks, id: randomId, title: newTaskTitle, isComplete: true },
+      ...tasks,
+      { id: randomId, title: newTaskTitle, isComplete: false },
     ]);
 
     setNewTaskTitle('');
@@ -51,7 +52,6 @@ export function TaskList() {
     <section className="task-list container">
       <header>
         <h2>Minhas tasks</h2>
-
         <div className="input-group">
           <input
             type="text"
@@ -68,7 +68,6 @@ export function TaskList() {
           </button>
         </div>
       </header>
-
       <main>
         <ul>
           {tasks.map(task => (
@@ -88,7 +87,6 @@ export function TaskList() {
                 </label>
                 <p>{task.title}</p>
               </div>
-
               <button
                 type="button"
                 data-testid="remove-task-button"
