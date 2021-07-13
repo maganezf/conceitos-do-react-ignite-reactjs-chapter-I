@@ -9,9 +9,11 @@
     "test": "jest --watchAll"
   },
   "dependencies": {
+    "glob-parent": "^5.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-icons": "^4.2.0"
+    "react-icons": "^4.2.0",
+    "trim-newlines": "^3.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.10",
